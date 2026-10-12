@@ -9,10 +9,10 @@ class PelangganController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        //
-    }
+    public function index(){
+		$data['dataPelanggan'] = Pelanggan::all();
+		return view('admin.pelanggan.index',$data);
+}
 
     /**
      * Show the form for creating a new resource.
