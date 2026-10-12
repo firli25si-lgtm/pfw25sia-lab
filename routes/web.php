@@ -47,3 +47,4 @@ Route::get('question', [QuestionController::class, 'index'])
 Route::get('/dashboard', [DashboardController::class, 'index'])
 		->name('dashboard.index');
 Route::resource('pelanggan', PelangganController::class);
+
