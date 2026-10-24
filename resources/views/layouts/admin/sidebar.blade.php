@@ -57,7 +57,7 @@
                         <span class="mt-1 ms-1 sidebar-text">Volt Overview</span>
                     </a>
                 </li>
-                <li class="nav-item  active ">
+                <li class="nav-item {{ request()->routeIs('dashboard.*') ? 'active' : '' }}">
                     <a href="{{ route('dashboard.index') }}" class="nav-link">
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
@@ -70,7 +70,7 @@
                     </a>
                 </li>
                 <!-- Tambahkan blok kode ini -->
-                <li class="nav-item  active ">
+                <li class="nav-item {{ request()->routeIs('pelanggan.*') ? 'active' : '' }}">
                     <a href="{{ route('pelanggan.index') }}" class="nav-link">
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -78,6 +78,17 @@
                             </svg>
                         </span>
                         <span class="sidebar-text">Pelanggan</span>
+                    </a>
+                </li>
+
+                <li class="nav-item {{ request()->routeIs('user.*') ? 'active' : '' }}">
+                    <a href="{{ route('user.index') }}" class="nav-link">
+                        <span class="sidebar-icon">
+                            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                            </svg>
+                        </span>
+                        <span class="sidebar-text">User</span>
                     </a>
                 </li>
 
